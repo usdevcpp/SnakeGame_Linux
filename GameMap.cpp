@@ -209,7 +209,7 @@ bool GameMap::CheckIfEmpty(int x, int y)
 
 void GameMap::PrintMap()
 {
-
+	addch('\n');
 	for (std::vector<char> i : m_gameMap)
 	{
 		for (char j : i)
@@ -220,13 +220,16 @@ void GameMap::PrintMap()
 		}
 	}
 
-	move(0,0);
-	//std::cout << "press arrow key or WASD to move" << "\n"; 
-	//std::cout << "press 't' to remove the telemetry data" << "\n";
-	//std::cout << "press 'p' to pause the game" << "\n";
-	//std::cout << "press 'r' to restart the game" << "\n";
-	//std::cout << "press 'q' to quit the game" << "\n";
 	
+	
+	printw("press arrow key or WASD to move\n");
+	printw("press 't' to remove the telemetry data\n");
+	printw("press 'p' to pause the game\n");
+	printw("press 'r' to restart the game\n");
+	printw("press 'q' to quit the game\n");
+
+	move(0,0);
+	refresh();
 	
 	//m_cur.CursorVisibility(false); //false to hide the cursor
 	//m_cur.SetCursorToStart();
