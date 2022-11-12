@@ -6,7 +6,7 @@ void Telemetry::BaseTelemetry(GameMap& map, Snake& snake)
 	auto p_snake{ &snake };
 
 	printw("-----------------------------------------------\n");
-	printw("snake size:%lu|\n",p_snake->GetSnake()->size() - 1);
+	printw("snake size:%lu\n",p_snake->GetSnake()->size() - 1);
 	printw("food location: (%d,%d)\n",p_snake->GetFoodX(), p_snake->GetFoodY());
 	printw("Head: (%d,%d)\n",p_map->GetMemX(), p_map->GetMemY());
 	printw("-Snake's POV (front, right, head, left, back)-\n");

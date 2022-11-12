@@ -220,8 +220,6 @@ void GameMap::PrintMap()
 		}
 	}
 
-	
-	
 	printw("press arrow key or WASD to move\n");
 	printw("press 't' to remove the telemetry data\n");
 	printw("press 'p' to pause the game\n");
@@ -230,7 +228,4 @@ void GameMap::PrintMap()
 
 	move(0,0);
 	refresh();
-	
-	//m_cur.CursorVisibility(false); //false to hide the cursor
-	//m_cur.SetCursorToStart();
 }

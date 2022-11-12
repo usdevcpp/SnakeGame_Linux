@@ -2,8 +2,6 @@
 #include<vector>
 //#include <iostream>
 
-#include"TerminalConfig.h"
-
 template <typename T>
 using Vec2D = std::vector<std::vector<T>>;
 
@@ -29,12 +27,6 @@ private:
 
 	//2d vector for the map
 	Vec2D<char> m_gameMap;
-
-	//control the curser
-	TerminalConfig m_cur;
-	//ConsoleConfig m_CLI;
-
-	
 
 public:
 	GameMap(char mapChar)
@@ -90,6 +82,5 @@ public:
 
 	//print\-update the map (when inside a while_true loop)-
 	void PrintMap();
-
 };
 

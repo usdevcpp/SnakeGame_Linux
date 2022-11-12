@@ -1,4 +1,3 @@
-//#include<conio.h>
 #include<curses.h>
 
 #include"GameMap.h"
@@ -8,24 +7,8 @@
 #include"Telemetry.h"
 #include"Telemetry.cpp"
 #include"Controls.h"
-#include"TerminalConfig.h"
-#include"TerminalConfig.cpp"
 
-int kbhit(void)
-{
-    int ch = getch();
-
-    if (ch != ERR) 
-	{
-        ungetch(ch);
-        return 1;
-    } 
-	else 
-	{
-        return 0;
-    }
-}
-
+int kbhit();
 
 int main()
 {
@@ -42,9 +25,6 @@ int main()
 		GameMap map{ '#' };
 		Snake snake{ '*', 5 };
 		Telemetry t;
-		//ConsoleConfig CLI;
-
-		//CLI.SetConsolePos(0,0,1024,768);
 		map.Map(); //initialize the game map
 		map.SnakeMap(); //initialize the game map for basic snake map
 
@@ -194,4 +174,19 @@ int main()
 		refresh();
 	}
 	return 0;
+}
+
+int kbhit()
+{
+    int ch = getch();
+
+    if (ch != ERR) 
+	{
+        ungetch(ch);
+        return 1;
+    } 
+	else 
+	{
+        return 0;
+    }
 }
