@@ -136,8 +136,8 @@ int main()
 						f_gameSetupLoop = false;
 						f_gameLoop = false;
 						endwin();
-
-						continue;
+						
+						return 0;
 					}
 					default:
 					{
@@ -173,7 +173,7 @@ int main()
 		clear();
 		refresh();
 	}
-	return 0;
+	//return 0;
 }
 
 int kbhit()
